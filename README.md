@@ -6,8 +6,8 @@ Record MP3 (and WAV) files in the browser using JavaScript and HTML.
 
 ### Why? ###
 
-The whole project got kicked off by using [Recordmp3js](https://github.com/nusofthq/Recordmp3js) - discovered in [this wonderful article](http://nusofthq.com/blog/recording-mp3-using-only-html5-and-javascript-recordmp3-js/) -
-and discovering that my needs where not entirely met. I needed the possibility to have multiple recorders on a site. Also, since the original code was being altered to only reflect the MP3 changes and changing
+The whole project got kicked off by using [Recordmp3js](https://github.com/nusofthq/Recordmp3js) - discovered in [this wonderful article by Remus](http://nusofthq.com/blog/recording-mp3-using-only-html5-and-javascript-recordmp3-js/) -
+and discovering that my needs were not entirely met. I needed the possibility to have multiple recorders on one site. Also, since the original code was being altered to only reflect the MP3 changes and changing
 it from stereo to mono, I had the feeling that a lot of unused code has been left in there and I found it difficult to actually see what's going on.
 
 ### Fork? ###
@@ -53,7 +53,7 @@ On a given `MP3Recorder` object you can simply call `stop()` to stop recording.
     
 ### Retrieving recorded data ###
 
-On a given `MP3Recorder` object you can call 3 methods to get the recorded data, depending which type you need.
+On a given `MP3Recorder` object you can call 3 methods to get the recorded data, depending on which type you need.
 
 #### As Blob data ####
 
@@ -87,6 +87,13 @@ If you create the `MP3Recorder` object with a third parameter you can specify a 
 ## Example ##
 
 For a complete example, using multiple recorders on a page, see the `index.html` file.
+
+## Known issues ##
+
+As mentioned in [the article by Remus](http://nusofthq.com/blog/recording-mp3-using-only-html5-and-javascript-recordmp3-js/) the resulting mp3 recording will be longer by approximately 50%,
+which is an issue of the lame library that's being used.
+
+A possible fix for this is mentioned [by Nicholas in the comment section](https://nusofthq.com/blog/recording-mp3-using-only-html5-and-javascript-recordmp3-js/#comment-674).
 
 
 ## Disclaimer ##
